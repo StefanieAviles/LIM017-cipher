@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Caesar Cipher</title>    
     <meta charset="utf-8">
-    <title>Caesar Cipher</title>
-    <script src="index.js"></script>
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="Padlock.jpg">
   </head>
   <body>
-    <section id="first_window">
+    <section class="modal" id="first_window">
       <h1>Clave segura</h1>    
       <img src="Padlock.jpg" id="padlock_image">
       <h2>Generador de claves</h2>
       <button id="Btn1">COMENZAR</button>
-    </section>    
+    </section>   
+    <section>
+      <h2>Ingresa el texto que deseas codificar</h2>
+      <input type= "text" required="" value="">
+      <button id="Btn2">CONTINUAR</button>
+    </section>
+    <script type= "module" src="index.js"></script> 
   </body>
 </html>
