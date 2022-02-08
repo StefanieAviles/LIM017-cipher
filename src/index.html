@@ -7,17 +7,38 @@
     <link rel="icon" href="Padlock.jpg">
   </head>
   <body>
-    <section class="modal" id="first_window">
-      <h1>Clave segura</h1>    
-      <img src="Padlock.jpg" id="padlock_image">
-      <h2>Generador de claves</h2>
-      <button id="Btn1">COMENZAR</button>
-    </section>   
-    <section>
-      <h2>Ingresa el texto que deseas codificar</h2>
-      <input type= "text" required="" value="">
-      <button id="Btn2">CONTINUAR</button>
-    </section>
+    <div class="container_first" id="first_window">
+      <section>
+        <h1>Clave segura</h1>    
+        <img src="Padlock.jpg" id="padlock_image">
+        <h2>Generador de claves</h2>
+        <button id="Btn1">COMENZAR</button>
+      </section>      
+    </div>   
+    <div class="container_second" id="second_window">
+      <section>
+        <h2>Ingresa el texto que deseas codificar<br> <br> <br></h2>
+        <input type= "text" required value="" id="phrase" pattern= "^[A-Za-z]+$" placeholder="INGRESA TU TEXTO">
+        <h3>Ingresa el numero que indicara el desplazamiento de tus letras</h3>
+        <input type="number" required="" id="displacement" step="1" min="1">
+        <button id="Btn2">CONTINUAR</button>
+      </section> 
+    </div>
+    <div class="container_third" id="third_window">
+      <section>
+        <br><br><h2>Tu clave codificada es: <br> <br></h2>
+        <p id="encode_phrase"></p><br>
+        <h3> Deseas decodificar tu clave? </h3>
+        <button id="Btn3">DECODIFICAR</button>
+      </section> 
+    </div>
+    <section class="container_fourth" id="fourth_window">
+      <br><br><h2>La frase que ingresaste inicialmente es: <br> <br></h2>
+      <p id="decode_phrase"></p><br>
+      <h3> Gracias por usar nuestros servicios </h3>
+      <button id="Btn4">GENERAR NUEVA CLAVE</button>
+    </section> 
     <script type= "module" src="index.js"></script> 
   </body>
+  <footer></footer>
 </html>

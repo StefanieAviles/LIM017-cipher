@@ -3,8 +3,8 @@ const cipher = {
   /*Funcion que codifica la frase ingresada por el usuario utilizando cifrado Cesar 
   parametro offset=desplazamiento frase=el string ingresado*/
   encode : function(offset,frase){
-    let desplazamiento = offset;
-    let frase_ingresada = frase;
+    let desplazamiento = Number(offset);
+    let frase_ingresada = frase.toUpperCase();
     let cantidad_letras = frase_ingresada.length;
     let contador_letras = 0;
     let nueva_frase = "";
@@ -13,17 +13,18 @@ const cipher = {
       let posicion_nueva = 0;
       let nueva_letra = "";
       posicion_ascii = frase_ingresada.charCodeAt(contador_letras);
-      posicion_nueva = ((posicion_ascii-65)+desplazamiento)%26 + 65;
+      posicion_nueva = (posicion_ascii-65 + desplazamiento) % 26 + 65;
       nueva_letra = String.fromCharCode(posicion_nueva);
       nueva_frase = nueva_frase + nueva_letra;
       contador_letras++;      
     }
-    alert(nueva_frase);    
+    return (nueva_frase);    
   },
   /*Funcion que decodifica la frase ingresada por el usuario utilizando cifrado Cesar*/
   decode : function(offset,frase){
-    let desplazamiento = offset;
+    let desplazamiento = Number(offset);
     let frase_ingresada = frase;
+    console.log(frase_ingresada);
     let cantidad_letras = frase_ingresada.length;
     let contador_letras = 0;
     let nueva_frase = "";
@@ -32,12 +33,12 @@ const cipher = {
       let posicion_nueva = 0;
       let nueva_letra = "";
       posicion_ascii = frase_ingresada.charCodeAt(contador_letras);
-      posicion_nueva = ((posicion_ascii-65)-desplazamiento)%26 + 65;
+      posicion_nueva = (posicion_ascii+65 - desplazamiento) % 26 + 65;
       nueva_letra = String.fromCharCode(posicion_nueva);
       nueva_frase = nueva_frase + nueva_letra;
       contador_letras++;      
     }
-    alert(nueva_frase);    
+    return (nueva_frase);    
   }
 };
 export default cipher;
