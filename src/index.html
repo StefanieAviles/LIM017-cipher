@@ -7,34 +7,56 @@
     <link rel="icon" href="Padlock.jpg">
   </head>
   <body>
-    <div class="container_first" id="first_window">
-      <section>
-        <h1>Clave segura</h1>    
-        <img src="Padlock.jpg" id="padlock_image">
-        <h2>Generador de claves</h2>
-        <button id="Btn1">COMENZAR</button>
-      </section>      
-    </div>   
-    <div class="container_second" id="second_window">
-      <section>
-        <h2>Ingresa el texto que deseas codificar<br> <br> <br></h2>
-        <input type= "text" required value="" id="phrase" pattern= "^[A-Za-z]+$" placeholder="INGRESA TU TEXTO">
-        <h3>Ingresa el numero que indicara el desplazamiento de tus letras</h3>
+    <section class="container_first" id="first_window">
+      <h1>Clave segura</h1>    
+      <img src="Padlock.jpg" id="padlock_image">
+      <h2>Generador de claves</h2>
+      <button id="Btn1">CONTINUAR</button>
+    </section> 
+    <section class="container" id="intro_window">
+      <h1>Indicaciones</h1>    
+      <img src="secure.gif" id="intro_image">
+      <div id="indicaciones">
+        <ol> 
+          <li>Debes ingresar una palabra que sea fácil de recordar para ti.</li>
+          <li>La palabra ingresada solo puede contener letras mayúsculas
+              no se aceptan números,ni espacios, ni caracteres especiales.</li>
+          <li>El campo desplazamiento indicará la cantidad de posiciones dentro
+              del abecedario que se moverá cada una de las letras ingresadas.</li>  
+          <li>En el desplazamiento solo se permite ingresar números enteros
+              mayores a 0. </li>
+        </ol>
+      </div>
+      <button id="open">COMENZAR</button>
+    </section>        
+    <section class="container" id="second_window">
+      <h2>Ingresa el texto que deseas codificar</h2>
+      <img src="password.gif" id="password_image">
+      <div id="input_text">
+        <input type= "text" required id="phrase" placeholder="INGRESE SU TEXTO AQUI">
+        <label id="label_text"></label>
+      </div>
+      <h3>Ingresa el número que indicará el desplazamiento de cada letra</h3>
+      <div id="input_number">
         <input type="number" required="" id="displacement" step="1" min="1">
-        <button id="Btn2">CONTINUAR</button>
-      </section> 
-    </div>
-    <div class="container_third" id="third_window">
-      <section>
-        <br><br><h2>Tu clave codificada es: <br> <br></h2>
-        <p id="encode_phrase"></p><br>
-        <h3> Deseas decodificar tu clave? </h3>
-        <button id="Btn3">DECODIFICAR</button>
-      </section> 
-    </div>
-    <section class="container_fourth" id="fourth_window">
+        <label id="label_number"></label>
+      </div>
+      <button id="Btn2">CODIFICAR</button>
+    </section> 
+    <section class="container" id="third_window">
+      <br><br><h2>Tu clave codificada es: <br> <br></h2>
+      <div id="encode_message">
+        <p id="encode_phrase"></p><br>        
+      </div>       
+      <h3> ¿Deseas decodificar tu clave? </h3>
+      <button id="Btn3">DECODIFICAR</button>
+      <button id="Return">REGRESAR AL INICIO</button>
+    </section> 
+    <section class="container" id="fourth_window">
       <br><br><h2>La frase que ingresaste inicialmente es: <br> <br></h2>
-      <p id="decode_phrase"></p><br>
+      <div id="decode_message">
+        <p id="decode_phrase"></p>        
+      </div>      
       <h3> Gracias por usar nuestros servicios </h3>
       <button id="Btn4">GENERAR NUEVA CLAVE</button>
     </section> 

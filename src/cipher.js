@@ -24,7 +24,6 @@ const cipher = {
   decode : function(offset,frase){
     let desplazamiento = Number(offset);
     let frase_ingresada = frase;
-    console.log(frase_ingresada);
     let cantidad_letras = frase_ingresada.length;
     let contador_letras = 0;
     let nueva_frase = "";
