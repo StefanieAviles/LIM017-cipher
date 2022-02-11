@@ -61,7 +61,7 @@ function isValid_number(sentence){
     }    
     cont_numbers++;
   }
-  if(not_allowed > 0 || sentence.length === 0){
+  if(not_allowed > 0 || sentence.length === 0 || Number(sentence)===0 || Number(sentence)>100){
     return false;
   } else {    
     return true;
@@ -72,7 +72,7 @@ encode_button.addEventListener("click", () => {
   //Si no es valido el texto pinta la caja de texto de rojo e indica el error
   if(!isValid_text(entered_phrase.value)){
     entered_phrase.classList.add("error");
-    document.getElementById("label_text").innerHTML = "Solo se aceptan letras";
+    document.getElementById("label_text").innerHTML = "Solo se aceptan letras mayúsculas sin espacios";
   }else{
     document.getElementById("phrase").classList.remove("error");
     document.getElementById("label_text").innerHTML = " ";
@@ -80,7 +80,7 @@ encode_button.addEventListener("click", () => {
   //Si no es valido el desplazamiento pinta la caja de texto de rojo e indica el error
   if(!isValid_number(offset.value)){
     offset.classList.add("error");
-    document.getElementById("label_number").innerHTML = "Solo se aceptan numeros enteros";
+    document.getElementById("label_number").innerHTML = "Solo se aceptan numeros enteros del 1 al 100";
   }else{
     document.getElementById("displacement").classList.remove("error");
     document.getElementById("label_number").innerHTML = " ";
