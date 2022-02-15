@@ -33,7 +33,7 @@
       <h2>Ingresa el texto que deseas codificar</h2>
       <img src="password.gif" id="password_image">
       <div id="input_text">
-        <input type= "text" required id="phrase" placeholder="INGRESE SU TEXTO AQUI">
+        <input type= "text" required id="phrase" placeholder="INGRESE SU TEXTO AQUI" onkeyup="document.getElementById(this.id).value=document.getElementById(this.id).value.toUpperCase()">
         <label id="label_text"></label>
       </div>
       <h3>Ingresa el número que indicará el desplazamiento de cada letra</h3>
