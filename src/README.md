@@ -2,7 +2,8 @@
 ## Proceso y decisiones de diseño
 Para realizar el proyecto Cipher inicialmente se realizó un prototipo en figma como se muestra a continuación  
 
-![Prototipo CIPHER](Design.jpg)
+![Prototipo CIPHER](Design.jpg)  
+
 [Link para ver el prototipo en figma] (https://www.figma.com/file/NQPOf80CyZ7YpHb7bfgdHo/Untitled?node-id=0%3A1)  
 
 Conforme se avanzó en la implementación del proyecto se fueron realizando ciertos cambios, tales como:
