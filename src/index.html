@@ -20,7 +20,7 @@
         <ol> 
           <li>Debes ingresar una palabra que sea fácil de recordar para ti.</li>
           <li>La palabra ingresada solo puede contener letras mayúsculas
-              no se aceptan números,ni espacios, ni caracteres especiales.</li>
+              no se aceptan números,ni caracteres especiales.</li>
           <li>El campo desplazamiento indicará la cantidad de posiciones dentro
               del abecedario que se moverá cada una de las letras ingresadas.</li>  
           <li>En el desplazamiento solo se permite ingresar números enteros
@@ -34,11 +34,12 @@
       <img src="password.gif" id="password_image">
       <div id="input_text">
         <input type= "text" required id="phrase" placeholder="INGRESE SU TEXTO AQUI" onkeyup="document.getElementById(this.id).value=document.getElementById(this.id).value.toUpperCase()">
+        <input type= "text" required id="phrase" placeholder="INGRESE SU TEXTO AQUI" onkeyup="document.getElementById(this.id).value =document.getElementById(this.id).value.toUpperCase()">
         <label id="label_text"></label>
       </div>
       <h3>Ingresa el número que indicará el desplazamiento de cada letra</h3>
       <div id="input_number">
-        <input type="number" required="" id="displacement">
+        <input type="number" required id="displacement">
         <label id="label_number"></label>
       </div>
       <button id="Btn2">CODIFICAR</button>
