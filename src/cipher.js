@@ -3,9 +3,7 @@ const cipher = {
   /*Funcion que codifica la frase ingresada por el usuario utilizando cifrado Cesar 
   parametro offset=desplazamiento phrase=el texto ingresado*/
   encode : function(offset,phrase){
-    if(!phrase) throw new TypeError("No ingresaste la frase");
     if(typeof phrase!== "string")throw new TypeError("No ingresast una frase valida");
-    if(!offset) throw new TypeError("No ingresaste un desplazamiento");
     if(typeof Number(offset)!== "number")throw new TypeError("No ingresast un desplazamiento valido");
     let displacement = Math.abs(Number(offset));
     let cont_letters = 0;
@@ -29,9 +27,7 @@ const cipher = {
   /*Funcion que decodifica la frase ingresada por el usuario utilizando cifrado Cesar
   parametro offset=desplazamiento phrase=el texto ingresado*/
   decode : function(offset,phrase){
-    if(!phrase) throw new TypeError("No ingresaste la frase");
     if(typeof phrase!== "string")throw new TypeError("No ingresast una frase valida");
-    if(!offset) throw new TypeError("No ingresaste un desplazamiento");
     if(typeof Number(offset)!== "number")throw new TypeError("No ingresast un desplazamiento valido");
     let displacement = Math.abs(Number(offset));
     let cont_letters = 0;
